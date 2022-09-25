@@ -29,27 +29,32 @@
 .container{
     width: 100%;
     height: 100vh;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1.2fr 0.8fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "firstpic firstpic firstpic firstpic firstpic shop shop shop shop"
-    "secpic secpic secpic middle middle middle third third third";
+    display: flex;
+    flex-direction: column;
+}
+.topContainer{
+    height: 60%;
+    display: flex;
+}
+.bottomContainer{
+    display: flex;
+    height: 40%;
 }
 .firstPic{
-    grid-area: firstpic;
+    width: 55%;
 }
 .shopSection{
-    grid-area: shop;
-    background-color: red;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .secondPic{
-    grid-area: secpic;
+    width: 33%;
     background-color: rgb(211, 130, 248);
 }
 .middle{
-    grid-area: middle;
+    width: 33%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -60,14 +65,53 @@
     width: 90%;
 }
 .middle h3{
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 2rem;
+    letter-spacing: 5px;
     margin-bottom: 1rem;
 }
 .middle p{
     color: var(--DarkGray);
+    word-spacing: 5px;
+    line-height: 15px;
 }
 .thirdPic{
     background-color: rgb(255, 166, 0);
-    grid-area: third;
+    width: 33%;
+}
+.PicsDown{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.firstImg{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2 / 1;
+}
+.firstDesc{
+    width: 80%;
+}
+.firstDesc h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.firstDesc p{
+    color: var(--DarkGray);
+    word-spacing: 5px;
+    line-height: 15px;
+}
+.shopNow{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.shopNow h3{
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+.desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
